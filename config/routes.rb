@@ -1,4 +1,6 @@
 StockOO::Application.routes.draw do
+  resources :categories
+
   resources :users
 
   # The priority is based upon order of creation:
