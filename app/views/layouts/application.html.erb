@@ -3,12 +3,37 @@
 <head>
   <title>StockOO</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="<%= root_path %>">
+          StockOO
+        </a>
+        <ul class="nav">
+          <li class="active">
+            <a href="<%= root_path %>">Home</a>
+          </li>
+          <li><a href="<%= users_path %>">Użytkownicy</a></li>
+          <li><a href="<%= categories_path %>">Kategorie</a></li>
+          <li><a href="<%= manufacturers_path %>">Producenci</a></li>
+          <li><a href="<%= products_path %>">Produkty</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="span8">
+        <%= yield %>
+      </div>
+      <div class="span4"></div>
+    </div>
+  </div>
 </body>
 </html>
