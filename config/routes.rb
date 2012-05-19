@@ -1,4 +1,6 @@
 StockOO::Application.routes.draw do
+  resources :manufacturers
+
   resources :categories
 
   resources :users
