@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :user_id, :value => current_admin.id %>
+
    <div class="control-group">
     <%= f.label :name, :class => "control-label" %><br />
     <div class="controls">
