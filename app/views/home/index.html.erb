@@ -1,1 +1,38 @@
-<h1>Home#index</h1>
+<div class="page-header">
+  <h2>Nowe produkty</h2>
+</div>
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render :partial => "product", :collection => @products %>
+<table>
+
+<div class="page-header">
+  <h2>Nowi Producenci</h2>
+</div>
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render :partial => "manufacturer", :collection => @manufacturers %>
+<table>
+
+<div class="page-header">
+  <h2>Nowe Kategorie</h2>
+</div>
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render :partial => "category", :collection => @categories %>
+<table>
