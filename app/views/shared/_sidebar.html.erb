@@ -1,0 +1,14 @@
+<div class="well">
+  <ul class="nav nav-list">
+     <li class="nav-header">Lista opcji:</li>
+     <li class="divider"></li>
+     <% options.each do |option|%>
+       <li>
+          <%= link_to option[:url] do%>
+            <i class="<%= option[:icon] %>"></i>
+            <%= option[:label] %>
+          <% end%>
+       </li>
+     <% end%>
+  </ul>
+</div>

@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Listing users</h1>
+  <h1><%= t("views.users_index.title") %></h1>
 </div>
 
 <table class="table">
@@ -10,31 +10,11 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.role %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <%= render :partial => "user", :collection => @users %>
 </table>
 
 <br />
 
 <% content_for :sidebar do %>
-  <div class="well">
-    <ul class="nav nav-list">
-       <li class="nav-header">Lista opcji:</li>
-       <li class="divider"></li>
-       <li>
-          <%= link_to new_user_path do %>
-            <i class="icon-plus"></i>
-            Nowy uzytkownik
-          <% end %>
-      </li>
-    </ul>
-  </div>
+  <%= render :partial => "shared/sidebar", :locals => { :options =>  sidebar_options(:users_index) } %>
 <% end %>

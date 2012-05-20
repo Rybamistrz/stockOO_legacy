@@ -5,3 +5,12 @@ pl:
     categories: "Kategorie"
     manufacturers: "Producenci"
     products: "Produkty"
+  sidebar_options:
+    new_user: "Nazwa użytkownika"
+  actions:
+    edit: "Edycja"
+    delete: "Usuń"
+  views:
+    users_index:
+      title: "Lista użytkowników"
+      confirm: "Czy napewno chcesz usunąć użytkownika %{user_name}?"

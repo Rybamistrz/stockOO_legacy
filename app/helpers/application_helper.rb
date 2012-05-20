@@ -8,4 +8,11 @@ module ApplicationHelper
       { :url => products_path, :label => t("menu_labels.products") }
     ]
   end
+
+  def sidebar_options(view_name)
+    case view_name
+    when :users_index 
+      [{ :url => new_user_path, :icon => "icon-plus", :label => t("sidebar_options.new_user") }]
+    end
+  end
 end
