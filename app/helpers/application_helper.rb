@@ -17,6 +17,8 @@ module ApplicationHelper
       [{ :url => new_category_path, :icon => "icon-plus", :label => t("views.categories_index.add_category") }]
     when :manufacturers_index
       [{ :url => new_manufacturer_path, :icon => "icon-plus", :label => t("views.manufacturers_index.add_manufacturer") }]
+    when :products_index
+      [{ :url => new_product_path, :icon => "icon-plus", :label => t("views.products_index.add_product") }]
     end 
   end
 end

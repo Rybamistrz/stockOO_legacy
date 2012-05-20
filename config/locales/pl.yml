@@ -9,6 +9,8 @@ pl:
     edit: "Edycja"
     delete: "Usuń"
   views:
+    shared:
+      sidebar_option_label: "Opcje"
     users_index:
       title: "Lista użytkowników"
       confirm: "Czy napewno chcesz usunąć użytkownika %{user_name}?"
@@ -18,4 +20,7 @@ pl:
       title: "Lista kategorii"
     manufacturers_index:
       add_manufacturer: "Dodaj producenta"
+    products_index:
+      title: "Lista produktów"
+      add_product: "Dodaj produkt"
 
