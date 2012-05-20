@@ -13,6 +13,8 @@ module ApplicationHelper
     case view_name
     when :users_index 
       [{ :url => new_user_path, :icon => "icon-plus", :label => t("sidebar_options.new_user") }]
+    when :categories_index
+      [{ :url => new_category_path, :icon => "icon-plus", :label => t("sidebar_options.new_category") }]
     end
   end
 end

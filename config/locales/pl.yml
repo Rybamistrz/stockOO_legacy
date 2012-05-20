@@ -14,3 +14,5 @@ pl:
     users_index:
       title: "Lista użytkowników"
       confirm: "Czy napewno chcesz usunąć użytkownika %{user_name}?"
+    categories_index:
+      title: "Lista kategorii"
