@@ -1,9 +1,10 @@
-<h1>Listing manufacturers</h1>
+<div class="page-header">
+  <h1>Listing manufacturers</h1>
+</div>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -11,7 +12,6 @@
 <% @manufacturers.each do |manufacturer| %>
   <tr>
     <td><%= manufacturer.name %></td>
-    <td><%= link_to 'Show', manufacturer %></td>
     <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
     <td><%= link_to 'Destroy', manufacturer, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -20,4 +20,17 @@
 
 <br />
 
-<%= link_to 'New Manufacturer', new_manufacturer_path %>
+<% content_for :sidebar do %>
+  <div class="well">
+    <ul class="nav nav-list">
+       <li class="nav-header">Lista opcji:</li>
+       <li class="divider"></li>
+       <li>
+         <%= link_to new_manufacturer_path do %>
+           <i class="icon-plus"></i>
+           Nowy produkt
+         <% end %>
+       </li>
+    </ul>
+  </div>
+<% end %>

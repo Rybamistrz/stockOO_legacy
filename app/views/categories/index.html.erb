@@ -7,13 +7,11 @@
     <th>Name</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
     <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
@@ -30,7 +28,7 @@
       <li>
         <%= link_to new_category_path do %>
           <i class="icon-plus"></i>
-          Nowy użytkownik
+          Nowa kategoria
         <% end %>
       </li>
     </ul>
