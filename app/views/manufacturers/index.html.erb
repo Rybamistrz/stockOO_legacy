@@ -8,29 +8,11 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @manufacturers.each do |manufacturer| %>
-  <tr>
-    <td><%= manufacturer.name %></td>
-    <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
-    <td><%= link_to 'Destroy', manufacturer, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <%= render :partial => "manufacturer", :collection => @manufacturers %>
 </table>
 
 <br />
 
 <% content_for :sidebar do %>
-  <div class="well">
-    <ul class="nav nav-list">
-       <li class="nav-header">Lista opcji:</li>
-       <li class="divider"></li>
-       <li>
-         <%= link_to new_manufacturer_path do %>
-           <i class="icon-plus"></i>
-           Nowy produkt
-         <% end %>
-       </li>
-    </ul>
-  </div>
+  <%= render :partial => "shared/sidebar", :locals => { :options =>  sidebar_options(:manufacturers_index) } %>
 <% end %>
