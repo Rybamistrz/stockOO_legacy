@@ -17,13 +17,11 @@
           StockOO
         </a>
         <ul class="nav">
-          <li class="active">
-            <a href="<%= root_path %>">Home</a>
-          </li>
-          <li><a href="<%= users_path %>">Użytkownicy</a></li>
-          <li><a href="<%= categories_path %>">Kategorie</a></li>
-          <li><a href="<%= manufacturers_path %>">Producenci</a></li>
-          <li><a href="<%= products_path %>">Produkty</a></li>
+          <% main_menu.each do |section| %>
+            <li class="<%= if section[:url] == request.path then "active" else "" end %>">
+              <a href="<%= section[:url]  %>"><%= section[:label]%></a>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
