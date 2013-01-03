@@ -1,0 +1,30 @@
+.page-header
+  %h2 Nowe produkty
+%table.table
+  %tr
+    %th #
+    %th
+    %th
+    %th
+  = render :partial => "product", :collection => @products
+  %table
+    .page-header
+      %h2 Nowi Producenci
+    %table.table
+      %tr
+        %th #
+        %th
+        %th
+        %th
+      = render :partial => "manufacturer", :collection => @manufacturers
+      %table
+        .page-header
+          %h2 Nowe Kategorie
+        %table.table
+          %tr
+            %th #
+            %th
+            %th
+            %th
+          = render :partial => "category", :collection => @categories
+          %table

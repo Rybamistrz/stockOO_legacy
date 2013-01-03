@@ -1,0 +1,6 @@
+%tr
+  %td= user.name
+  %td= user.email
+  %td= user.role
+  %td= link_to t("actions.edit"), edit_user_path(user), :class => "btn btn-primary"
+  %td= link_to t("actions.delete"), user, confirm: t("views.users_index.confirm", :user_name => user.name) , method: :delete, :class => "btn btn-danger"
